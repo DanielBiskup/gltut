@@ -1,9 +1,9 @@
-# Rubik's Rube
+# Rubik's Cube
 The code is based on an older version of [Chapter 3. OpenGL's Moving Triangle](https://paroj.github.io/gltut/Positioning/Tutorial%2003.html) of the [Learning Modern 3D Graphics Programming](https://paroj.github.io/gltut/index.html) by Jason L. McKesson. Originally I didn't use Git for this project, and only now (2018) decided to upload the code to GitHub. Before doing so, I removed most of the tutorials code which was not important tomy project.
 
 Most (but not all) of the code in `rubiks-cube/src` was written by me. All the other code was not.
 
-##How to build it
+## How to build it
 How to build the original tutorials is explained [here](https://paroj.github.io/gltut/Building%20the%20Tutorials.html). I will give the commands needed to compile what's important to the Rubik's Cube project.
 
 You need [premake4](https://premake.github.io/) to build.
