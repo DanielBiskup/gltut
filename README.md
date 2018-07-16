@@ -1,4 +1,6 @@
 # Rubik's Cube
+![Alt Text](https://github.com/DanielBiskup/rubiks-cube/blob/master/cube.gif)
+
 The code is based on an older version of [Chapter 3. OpenGL's Moving Triangle](https://paroj.github.io/gltut/Positioning/Tutorial%2003.html) of the [Learning Modern 3D Graphics Programming](https://paroj.github.io/gltut/index.html) by Jason L. McKesson. Originally I didn't use Git for this project, and only now (2018) decided to upload the code to GitHub. Before doing so, I removed most of the tutorials code which was not important tomy project.
 
 Most (but not all) of the code in `rubiks-cube/src` was written by me. All the other code was not.
