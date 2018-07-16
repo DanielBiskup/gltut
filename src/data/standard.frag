@@ -37,7 +37,7 @@ void main()
     outputColor = ambientLightComponent + diffuseComponent + speculatComponent;
     //outputColor = speculatComponent;
     //outputColor = vec4(textureCoordinate, 0, 1);
-    outputColor = vec4(n, 1);
+    //outputColor = vec4(n, 1);
 }
 
 vec3 fragmentNormal(vec2 textureCoordinate, vec3 t, vec3 b)
