@@ -40,8 +40,24 @@ void main()
     //outputColor = vec4(n, 1);
 }
 
+float f_buttomAndLeft(float x)
+{
+	if(x < 0.1f)
+		return x;
+	else if(x > 0.9f)
+		return 1-x;
+	else
+		return 0.1f;
+}
+
+float f_topAndRight(float x)
+{
+	return 1 - f_buttomAndLeft(x);
+}
+
 vec3 fragmentNormal(vec2 textureCoordinate, vec3 t, vec3 b)
 {
+/*
     vec3 normal_tangentSpace;
     if (
         textureCoordinate.x > 0.1 &&
@@ -56,6 +72,38 @@ vec3 fragmentNormal(vec2 textureCoordinate, vec3 t, vec3 b)
     {
        normal_tangentSpace = vec3(0,1,1);
     }
+*/
+    vec3 normal_tangentSpace;
+	float x = textureCoordinate.x;
+	float y = textureCoordinate.y;
+    if (
+        x > 0.1 &&
+        x < 0.9 &&
+        y > 0.1 &&
+        y < 0.9
+       )
+    {
+        normal_tangentSpace = vec3(0,0,1);
+    }
+
+    else if( y < f_buttomAndLeft(x)) //Unterer Rand
+    {
+       normal_tangentSpace = vec3(0,-1,1);
+    }
+	
+	else if( x < f_buttomAndLeft(y)) //Linker Rand
+    {
+       normal_tangentSpace = vec3(-1,0,1);
+    }
+	else if( y > f_topAndRight(x)) //Oberer Rand
+    {
+       normal_tangentSpace = vec3(0,1,1);
+    }
+	else if( x > f_topAndRight(y)) //Rechter Rand
+    {
+       normal_tangentSpace = vec3(1,0,1);
+    }
+
     vec3 n = normalize(cross(t,b));
     normal_tangentSpace = normalize(normal_tangentSpace);
     vec3 normal_worldSpace = normal_tangentSpace.x * t + normal_tangentSpace.y * b + normal_tangentSpace.z * n;
