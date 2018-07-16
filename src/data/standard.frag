@@ -57,22 +57,6 @@ float f_topAndRight(float x)
 
 vec3 fragmentNormal(vec2 textureCoordinate, vec3 t, vec3 b)
 {
-/*
-    vec3 normal_tangentSpace;
-    if (
-        textureCoordinate.x > 0.1 &&
-        textureCoordinate.x < 0.9 &&
-        textureCoordinate.y > 0.1 &&
-        textureCoordinate.y < 0.9
-       )
-    {
-        normal_tangentSpace = vec3(0,0,1);
-    }
-    else
-    {
-       normal_tangentSpace = vec3(0,1,1);
-    }
-*/
     vec3 normal_tangentSpace;
 	float x = textureCoordinate.x;
 	float y = textureCoordinate.y;
